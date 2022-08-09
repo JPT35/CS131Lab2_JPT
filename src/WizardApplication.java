@@ -1,28 +1,29 @@
+
+import java.util.Scanner;
 public class WizardApplication {
 
 	public static void main(String[] args) {
 	
-
-		Wizard wiz = new Wizard("Gandalf", 100, 1, true);
+		Scanner s = new Scanner(System.in);
+		
+		
+		Wizard wiz = new Wizard("Gandlaf");
 		
 		System.out.println(wiz.toString());
 		
-		System.out.println(wiz.getHealth());
+		System.out.println("Enter health for Gandalf: ");
+		wiz.health = s.nextInt();
+		System.out.println("Enter key: (1 or 0)");
+		wiz.key = s.nextInt();
+		
+		System.out.println(wiz.isLocked());
 		
 		wiz.takeDamage(20);
 		
+		System.out.println(wiz.toString());
 		
-		System.out.println();
-		
-		
-		Wizard wiz2 = new Wizard ("Dumbledore", 100, 0, false);
-		
-		System.out.println(wiz2.toString());
-		
-		System.out.println(wiz2.getHealth());
-		
-		wiz2.takeDamage(20);
-		
+
+	
 		
 		
 	}//end main method
